@@ -851,19 +851,19 @@ try
                             if Exps==1
                                 resp_for_show = (strcat([ 'Attractiveness: ' num2str(likert(tmpPoint)) ]));
                             else
-                                resp_for_show = (strcat([ 'Confidence: ' num2str(likert(tmpPoint)) ]));
+                                resp_for_show = (strcat([ 'Confidence: ' num2str(tmpPoint) ]));
                             end
                         else
                             if Exps==1
                                 resp_for_show = (strcat([ 'Attraktivität: ' num2str(likert(tmpPoint)) ]));
                             else
-                                resp_for_show = (strcat([ 'Zuversicht: ' num2str(likert(tmpPoint)) ]));
+                                resp_for_show = (strcat([ 'Zuversicht: ' num2str(tmpPoint) ]));
                             end
                         end
                         
                         Screen('DrawText', PTBSet.screenHandle, resp_for_show  ,cp(1)-100 , cp(2)+250 );
                         
-                        % Screen('TextSize',PTBSet.screenHandle,40);
+			if Exps == 1
                         Screen('DrawText', PTBSet.screenHandle, '-4'  ,respRange(1)-20, cp(2)+380 );
                         Screen('DrawText', PTBSet.screenHandle, '-3'  ,respRange(2)-20, cp(2)+380 );
                         Screen('DrawText', PTBSet.screenHandle, '-2'  ,respRange(3)-20, cp(2)+380 );
@@ -873,7 +873,17 @@ try
                         Screen('DrawText', PTBSet.screenHandle, '2'  ,respRange(7)-15, cp(2)+380 );
                         Screen('DrawText', PTBSet.screenHandle, '3'  ,respRange(8)-15, cp(2)+380 );
                         Screen('DrawText', PTBSet.screenHandle, '4'  ,respRange(9)-15, cp(2)+380 );
-                        
+                        else
+                        Screen('DrawText', PTBSet.screenHandle, '1'  ,respRange(1)-20, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '2'  ,respRange(2)-20, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '3'  ,respRange(3)-20, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '4'  ,respRange(4)-20, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '5'  ,respRange(5)-15, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '6'  ,respRange(6)-15, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '7'  ,respRange(7)-15, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '8'  ,respRange(8)-15, cp(2)+380 );
+                        Screen('DrawText', PTBSet.screenHandle, '9'  ,respRange(9)-15, cp(2)+380 );
+                        end
                         %%%%%%%%%%%%%%%%%%%%%%%% Get Response %%%%%%%%%%%%%%%%%%%%%%%%
                         [~,~,keyCode]=KbCheck;
                         if keyCode(PTBSet.Keys.leftKey)
