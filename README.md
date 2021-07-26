@@ -7,5 +7,5 @@ ChoiceBlindnessExp() is the main function of the experiment, other necessary fun
 
 Further comments and explanations will be given in the future.
 
-# Warning
+# Compatibility
 All scripts are written on a Ubuntu 20.04 system, so please consider checking different operating system requirements for different functions. Also, most of the screen drawings are based on visual degress, but some might still based on pixel values. I plan to update and optimize all functions.
